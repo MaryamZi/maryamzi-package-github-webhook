@@ -37,9 +37,14 @@ endpoint github:WebhookListener githubListenerEP {
 }
 service<github:WebhookService> githubWebhook bind githubListenerEP {
 
-   onWatch (websub:Notification notification, github:WatchEvent watchEvent) {
+   onPing(websub:Notification notification, github:PingEvent event) {
        io:println("GitHub Notification Received, X-GitHub-Event header: ", notification.getHeaders("X-GitHub-Event"));
-       io:println(watchEvent.sender.login, " just starred ", watchEvent.repository.full_name);
+       io:println("Webhook added with URL: ", event.hook.config.url);
+   }
+
+   onWatch(websub:Notification notification, github:WatchEvent event) {
+       io:println("GitHub Notification Received, X-GitHub-Event header: ", notification.getHeaders("X-GitHub-Event"));
+       io:println(event.sender.login, " just starred ", event.repository.full_name);
    }
 
 }
