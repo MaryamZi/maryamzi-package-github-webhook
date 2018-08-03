@@ -110,6 +110,60 @@ public type Repository record {
 };
 
 documentation {
+    The record representing a GitHub Hook.
+}
+public type Hook record {
+    string ^"type",
+    int id,
+    string name,
+    boolean active,
+    string[] events,
+    HookConfig config,
+    string updated_at,
+    string created_at,
+    string url,
+    string test_url,
+    string ping_url,
+    HookLastResponse last_response,
+};
+
+documentation {
+    The record representing a GitHub Hook Config.
+}
+public type HookConfig record {
+    string content_type,
+    string secret,
+    string url,
+    string insecure_ssl,
+};
+
+documentation {
+    The record representing a GitHub Hook Last Response.
+}
+public type HookLastResponse record {
+    string? code,
+    string status,
+    string? message,
+};
+
+documentation {
+    The record representing a GitHub Ping Event.
+
+    F{{zen}}        The random GitHub zen string
+    F{{hook_id}}    The ID of the Webhook
+    F{{hook}}       The Webhook configuration
+    F{{repository}} The repository for which the hook was added
+    F{{sender}}     The user who added the hook
+}
+public type PingEvent record {
+    string zen,
+    int hook_id,
+    Hook hook,
+    Repository repository,
+    User sender,
+};
+
+documentation {
     The record representing a GitHub Watch Event.
 
     F{{action}}     The action performed

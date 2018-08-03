@@ -118,5 +118,6 @@ function WebhookListener::stop () {
 @final string GITHUB_TOPIC_HEADER = "X-GitHub-Event";
 
 @final map<(string, typedesc)> GITHUB_TOPIC_HEADER_RESOURCE_MAP = {
+    "ping" : ("onPing", PingEvent),
     "watch" : ("onWatch", WatchEvent)
 };
