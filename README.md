@@ -1,0 +1,1 @@
+A basic webhook service, implemented extending Ballerina's WebSub Subscriber Service, accepting GitHub star events.
