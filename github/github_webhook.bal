@@ -31,7 +31,7 @@ public type WebhookService object {
 documentation {
     Object representing the GitHub Webhook (WebSub Subscriber Service) Endpoint
 
-    F{{config}}             The configuration for the endpoint
+    F{{webhookListenerConfig}}             The configuration for the endpoint
 }
 public type WebhookListener object {
 
