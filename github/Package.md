@@ -9,7 +9,7 @@ notifications from GitHub once a repository is starred.
 
 |                                 |       Version                  |
 |  :---------------------------:  |  :---------------------------: |
-|  Ballerina Language             |   0.982.0                      |
+|  Ballerina Language             |   0.981.0                      |
 
 ## Sample
 
