@@ -16,9 +16,7 @@
 import ballerina/http;
 import ballerina/websub;
 
-documentation {
-    The object representing the GitHub Webhook Service.
-}
+documentation { The object representing the GitHub Webhook Service. }
 public type WebhookService object {
 
     public function getEndpoint() returns (WebhookListener) {
@@ -28,9 +26,7 @@ public type WebhookService object {
 
 };
 
-documentation {
-    Object representing the GitHub Webhook (WebSub Subscriber Service) Endpoint
-
+documentation { Object representing the GitHub Webhook (WebSub Subscriber Service) Endpoint
     F{{webhookListenerConfig}}             The configuration for the endpoint
 }
 public type WebhookListener object {
@@ -43,42 +39,30 @@ public type WebhookListener object {
         websubListener = new;
     }
 
-    documentation {
-        Gets called when the endpoint is being initialized during package init.
-
+    documentation { Gets called when the endpoint is being initialized during package init.
         P{{config}} The SubscriberServiceEndpointConfiguration of the endpoint
     }
     public function init(WebhookListenerConfiguration config);
 
-    documentation {
-        Gets called whenever a service attaches itself to this endpoint and during package init.
-
+    documentation { Gets called whenever a service attaches itself to this endpoint and during package init.
         P{{serviceType}}    The service attached
     }
     public function register(typedesc serviceType);
 
-    documentation {
-        Starts the registered service.
-    }
+    documentation { Starts the registered service. }
     public function start();
 
-    documentation {
-        Returns the connector that client code uses.
-
+    documentation { Returns the connector that client code uses.
         R{{}}   The connector that client code uses
     }
     public function getCallerActions() returns (http:Connection);
 
-    documentation {
-        Stops the endpoint.
-    }
+    documentation { Stops the endpoint. }
     public function stop();
 
 };
 
-documentation {
-    Object representing the configuration for the GitHub Webhook Listener.
-
+documentation { Object representing the configuration for the GitHub Webhook Listener.
     F{{host}}   The host name/IP of the endpoint
     F{{port}}   The port to which the endpoint should bind to
 }

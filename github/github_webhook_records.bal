@@ -13,9 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-documentation {
-    The record representing a GitHub User.
-}
+documentation { The record representing a GitHub User. }
 public type User record {
     string login,
     int id,
@@ -36,9 +34,7 @@ public type User record {
     boolean site_admin,
 };
 
-documentation {
-    The record representing a GitHub Repository.
-}
+documentation { The record representing a GitHub Repository. }
 public type Repository record {
     int id,
     string name,
@@ -109,9 +105,7 @@ public type Repository record {
     string default_branch,
 };
 
-documentation {
-    The record representing a GitHub Hook.
-}
+documentation { The record representing a GitHub Hook. }
 public type Hook record {
     string ^"type",
     int id,
@@ -127,9 +121,7 @@ public type Hook record {
     HookLastResponse last_response,
 };
 
-documentation {
-    The record representing a GitHub Hook Config.
-}
+documentation { The record representing a GitHub Hook Config. }
 public type HookConfig record {
     string content_type,
     string secret,
@@ -137,18 +129,14 @@ public type HookConfig record {
     string insecure_ssl,
 };
 
-documentation {
-    The record representing a GitHub Hook Last Response.
-}
+documentation { The record representing a GitHub Hook Last Response. }
 public type HookLastResponse record {
     string? code,
     string status,
     string? message,
 };
 
-documentation {
-    The record representing a GitHub Ping Event.
-
+documentation { The record representing a GitHub Ping Event.
     F{{zen}}        The random GitHub zen string
     F{{hook_id}}    The ID of the Webhook
     F{{hook}}       The Webhook configuration
@@ -163,9 +151,7 @@ public type PingEvent record {
     User sender,
 };
 
-documentation {
-    The record representing a GitHub Watch Event.
-
+documentation { The record representing a GitHub Watch Event.
     F{{action}}     The action performed
     F{{repository}} The repository starred
     F{{sender}}     The user who starred the repository
