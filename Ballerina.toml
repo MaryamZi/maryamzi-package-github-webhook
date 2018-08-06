@@ -1,3 +1,7 @@
 [project]
 org-name = "maryamzi"
-version = "0.0.2"
+version = "0.0.3"
+license = "Apache-2.0"
+authors = ["maryamzi"]
+repository = "https://github.com/MaryamZi/maryamzi-package-github-webhook"
+keywords = ["webhook", "github", "websub", "pubsubhubbub"]
