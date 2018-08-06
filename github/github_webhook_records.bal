@@ -42,7 +42,7 @@ public type Repository record {
     User owner,
     boolean ^"private",
     string html_url,
-    string description,
+    string? description,
     boolean is_fork,
     string url,
     string forks_url,

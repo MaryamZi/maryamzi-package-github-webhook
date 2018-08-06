@@ -27,6 +27,7 @@ public type WebhookService object {
 };
 
 documentation { Object representing the GitHub Webhook (WebSub Subscriber Service) Endpoint
+    E{{}}
     F{{webhookListenerConfig}}             The configuration for the endpoint
 }
 public type WebhookListener object {
